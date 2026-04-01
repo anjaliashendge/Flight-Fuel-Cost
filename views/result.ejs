@@ -25,11 +25,11 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        // 1. Force the theme to match what was selected on the home page
+        
         const savedTheme = localStorage.getItem("theme") || "light";
         document.documentElement.setAttribute("data-theme", savedTheme);
 
-        // 2. Map Logic (Fixed double declarations)
+        //Map Logic
         const fromCoords = [parseFloat('<%= fromLat %>'), parseFloat('<%= fromLng %>')];
         const toCoords = [parseFloat('<%= toLat %>'), parseFloat('<%= toLng %>')];
 
@@ -49,7 +49,7 @@
             dashArray: '10, 10' 
         }).addTo(map);
 
-        // 3. Fix map render issues
+        //Fix map render issues
         setTimeout(() => {
             map.invalidateSize();
             map.fitBounds(route.getBounds(), { padding: [40, 40] });

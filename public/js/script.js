@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.setAttribute("data-theme", savedTheme);
     if(icon) icon.textContent = savedTheme === "dark" ? "🌙" : "☀️";
 
-    // Theme Toggle logic
+    // Theme Toggle
     if(toggle) {
         toggle.addEventListener("click", () => {
             const current = document.documentElement.getAttribute("data-theme");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Aircraft Selection logic
+    // Aircraft Selection
     if(manufacturer) {
         manufacturer.addEventListener("change", () => {
             aircraft.innerHTML = '<option disabled selected>Select aircraft</option>';

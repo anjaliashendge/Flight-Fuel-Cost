@@ -13,7 +13,7 @@ app.set("views", path.join(__dirname, "views"));
 const flightRoutes = require("./routes/flight");
 app.use("/", flightRoutes);
 
-// Global error handler
+//Global error handler
 app.use((err, req, res, next) => {
   res.status(500).render("error", { message: err.message });
 });
