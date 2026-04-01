@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-const GEO_API_KEY = "f912e6b9233a4ca69eb9fe65b2a769b0";
-const CURRENCY_API_KEY = "fe9162d72d7247e2bee9c3ca";
+const GEO_API_KEY = process.env.GEO_API_KEY;
+const CURRENCY_API_KEY = process.env.CURRENCY_API_KEY;
 
 async function getCoordinates(place) {
   const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(place)}&key=${GEO_API_KEY}`;
